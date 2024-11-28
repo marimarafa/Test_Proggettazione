@@ -1,0 +1,31 @@
+Vincoli esterni: per ogni istanza 'r' di Ricovero:
+r.terminato = 'True' se e solo se r.fine è valorizzato.
+r.fine > r.inizio.
+
+___________________________________________________________
+		Schema relazionale delle base dati
+	
+Paziente(__cf:varchar__, nome:varchar, cognome:varchar)
+
+Ricovero(__id:Serial__, inizio:TimeStamp,terminato:Boolean,fine:TimeStamp*,paziente:varchar)
+foreign key: (paziente) references Paziente(cf) 
+CHECK (WHEN terminato is False THEN fine is null,
+	ELSE fine is not null AND fine > inizio)
+END
+
+
+Medico(__codice:Integer__,spec_medica:varchar)
+foreign key: (spec_medica) references SpecializzazioneMedica(nome) 
+
+MedicoResp(__medico:Integer,ricovero:Serial__)
+foreign key: (medico) references Medico(codice) 
+foreign key: (ricovero) references Ricovero(id) 
+
+SpecializzazioneMedica(__nome:varchar__)
+
+(*):può essere null.
+
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																			
+
+
+

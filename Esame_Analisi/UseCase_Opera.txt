@@ -1,0 +1,8 @@
+opere_realizzate(a:Autore,inizio:Data,fine:Data): Opera[0..*]
+    pre:
+        nessuna
+    post:  
+        result = l'insieme dell'oggetto 'o':Opera tali che :
+            - sia coinvolto nel link(a,o):aut_op.
+            - sia coinvolto con l'oggetto 'e':EsposizioneTemporanea nel link(o,e):esp_op.
+            - sia e.inizio != inizio , e.fine != fine. 

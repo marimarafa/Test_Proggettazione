@@ -1,0 +1,12 @@
+esp_max_vendita_big(inizio:Data,fine:Data): EsposizioneTemporanea[0..*]
+    pre:
+        nessuna
+    post:
+        result = l'insieme dell'oggetto 'e':EsposizioneTemporanea tali che:
+            - e.inizio >= inizio , e.fine <= fine.
+            - sia coinvolto con il maggior numero di insiemi dell'oggetto'b':BigliettoExtend 
+                nel link(e,b):esp.t_big.ex.
+            - sia e.prezzo_accesso coinvolto in b.calcola_prezzo().
+            
+
+

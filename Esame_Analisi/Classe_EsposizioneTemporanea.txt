@@ -1,0 +1,5 @@
+            Vincoli Esterni
+            
+[V.EsposizioneTemporanea.gestione_data_fine]
+Per ogni oggetto e:EsposizioneTemporanea:
+sia e.fine > e.inizio.

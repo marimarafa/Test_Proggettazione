@@ -1,0 +1,5 @@
+                    Vincoli Esterni
+
+[V.Biglietto.gestione_data_validità]
+Per ogni oggetto b:Biglietto:
+sia b.data_validità > v.istante_acquisto.

@@ -1,0 +1,5 @@
+        Vincoli Esterni
+        
+[v.Autore.gestione_data_morte]
+Per ogni oggetto a:Autore:
+Se data_morte è valorizzato allora a.data_morte > a.data_nascita.

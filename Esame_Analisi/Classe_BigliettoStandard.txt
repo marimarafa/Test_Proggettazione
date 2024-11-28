@@ -1,0 +1,7 @@
+				 classe Biglietto Standard
+
+calcola_prezzo(tariffa:Tariffa):Reale >= 0
+    pre:
+        nessuna
+    post:
+        result = tariffa.prezzo_base.

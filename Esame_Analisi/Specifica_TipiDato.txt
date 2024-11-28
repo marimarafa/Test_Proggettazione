@@ -1,0 +1,8 @@
+    Specifica dei tipi di dato
+    
+Indirizzo: {
+	via: Stringa
+	civico: Stringa ~ [0-9]+(/[a-zA-L]+)?
+	cap: Stringa [0-9]{5}
+	citta: Stringa
+}

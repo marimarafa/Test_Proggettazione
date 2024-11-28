@@ -1,0 +1,8 @@
+				 classe Biglietto Extend
+
+calcola_prezzo(tariffa:Tariffa,es_temp:EsposizioneTemporanea):Reale >= 0
+	pre:
+		nessuna
+	post:
+		result = tariffa.prezzo_base + es_temp.prezzo_accesso per ogni link di
+		(this,es_temp):esp.t_big.ex.

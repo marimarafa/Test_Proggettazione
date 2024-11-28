@@ -1,0 +1,11 @@
+calcola_num_biglietti_venduti(e:EsposizioneTemporanea,
+data:Data) : BigliettoExtend [0..*]
+
+    pre:
+        nessuna
+    post:
+        result = l'insieme di oggetti 'b':BigliettoExtend tali che :
+            - è associato al link(b,e):esp.t_big.ex 
+            -  e.inizio > data , e.fine < data 
+            - e.prezzo_accesso coinvolto in b.calcola_prezzo()  .
+        
